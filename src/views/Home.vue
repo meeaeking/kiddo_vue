@@ -11,10 +11,15 @@
       <p><button v-on:click="getPlaydate('parks')">Parks</button></p>
       <p><button v-on:click="getPlaydate('playgrounds')">Playgrounds</button></p>
       <p><button v-on:click="getPlaydate('arcades')">Arcades</button></p>
+      <p><button v-on:click="getPlaydate('farms')">Farms</button></p>
+      <p><button v-on:click="getPlaydate('festivals')">Festivals</button></p>
     </div>
     <div v-for="playdate in playdates">
       <h2>{{ playdate.name }}</h2>
       <h2>{{ playdate.location }}</h2>
+      <p><a v-bind:href="playdate.yelp_url">Yelp Link</a></p>
+      <img width="250px" v-bind:src="playdate.image_url">
+      <p><router-link v-bind:to="`/playdates/${playdate.id}`">Choose this Location</router-link></p>
   
     </div>
     
