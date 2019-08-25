@@ -3,6 +3,7 @@
     <h1>Connect with a Friend</h1>
     <div v-for="friend in friends">
       <h2>{{ friend.name }}</h2>
+      <router-link v-bind:to="`/friendships/new`">Press Here</router-link>
     </div>
   </div>
 </template>

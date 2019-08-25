@@ -7,6 +7,7 @@ import Login from "./views/Login.vue";
 import Logout from "./views/Logout.vue";
 import SeeFriends from "./views/SeeFriends.vue";
 import NotFriends from "./views/NotFriends.vue";
+import FriendsNew from "./views/FriendsNew.vue";
 
 
 
@@ -35,6 +36,11 @@ export default new Router({
       path: '/notfriends',
       name: 'not-friends',
       component: NotFriends
+    },
+    {
+      path: '/friendships/new',
+      name: 'friends-new',
+      component: FriendsNew
     },
     {
       path: '/about',
