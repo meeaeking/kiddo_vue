@@ -3,7 +3,8 @@
     <h1>Connect with a Friend</h1>
     <div v-for="friend in friends">
       <h2>{{ friend.name }}</h2>
-      <router-link v-bind:to="`/friendships/new`">Press Here</router-link>
+      <h2>{{ friend.id }}</h2>
+      <button v-on:click="beFriends(friend.id)">Press Here</button>
     </div>
   </div>
 </template>
@@ -22,6 +23,17 @@ export default {
       this.friends = response.data;
     });
   },
-  methods: {}
+  methods: {
+    beFriends: function(friendId) {
+      console.log("this is be friends");
+      console.log(friendId);
+      var params = {
+        friend_id: friendId
+      };
+      axios.post("/api/friendships", params).then(response => {
+        this.$router.push("/seefriends");
+      });
+    }
+  }
 };
 </script>
