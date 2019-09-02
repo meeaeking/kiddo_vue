@@ -1,5 +1,3 @@
-
-
 <template>
   <div class="signup">
     <div class="container">
@@ -15,6 +13,10 @@
         <div class="form-group">
           <label>Email:</label>
           <input type="email" class="form-control" v-model="email">
+        </div>
+        <div class="form-group">
+          <label>City:</label>
+          <input type="location" class="form-control" v-model="location">
         </div>
         <div class="form-group">
           <label>Password:</label>
@@ -39,6 +41,7 @@ export default {
       name: "",
       email: "",
       password: "",
+      location: "",
       passwordConfirmation: "",
       errors: []
     };
@@ -48,6 +51,7 @@ export default {
       var params = {
         name: this.name,
         email: this.email,
+        location: this.location,
         password: this.password,
         password_confirmation: this.passwordConfirmation
       };
