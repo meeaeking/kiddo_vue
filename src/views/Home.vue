@@ -30,27 +30,10 @@
             </div>
          </div>
       </section>
-    <div>
-      <!-- Location: <input type="text" v-model="location"> -->
+    <div class="locationsearch">
+      <h3>Location: <input type="text" v-model="location"></h3>
     </div>
-    <div class="col-lg-3 col-md-4 col-sm-6 col-6">
-      <div class="input-group">
-           <div class="input-group-addon"><i class="mdi mdi-map-marker-multiple"></i></div>
-           <select class="form-control select2" name="location" v-model="location">
-              <option disabled="" selected="">Choose Your City</option>
-              <option>Chicago</option>
-              <option>NewYorkCity</option>
-              <option>Baltimore</option>
-              <option>Houston</option>
-              <option>Memphis</option>
-              <option>Atlanta</option>
-              <option>Los Angeles</option>
-              <option>Seattle</option>
-              <option>Denver</option>
-              <option></option>
-           </select>
-        </div>
-      </div>
+    
     <div>
       <button style="position:relative;" type="button" class="btn btn-success spacing" v-on:click="getPlaydate('museums')">Museums</button>
       <button style="position:relative;" type="button" class="btn btn-success spacing" v-on:click="getPlaydate('amusementparks')">Amusement Parks</button>
@@ -103,7 +86,10 @@
 
 .locationsearch {
   position: relative;
-  margin: 20px;
+  top: 35px;
+  left: 175px;
+  right: 50px;
+  margin: 10px;
 }
 </style>
 
@@ -114,7 +100,7 @@ export default {
   data: function() {
     return {
       playdates: [],
-      location: "seattle"
+      location: ""
     };
   },
   created: function() {

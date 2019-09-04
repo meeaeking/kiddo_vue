@@ -7,8 +7,13 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@google-cloud/storage": "^3.2.1",
     "axios": "^0.19.0",
+    "busboy": "^0.3.1",
     "core-js": "^2.6.5",
+    "cors": "^2.8.5",
+    "os": "^0.1.1",
+    "path": "^0.12.7",
     "pubnub-vue": "^1.0.1",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
